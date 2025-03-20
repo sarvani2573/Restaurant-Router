@@ -7,11 +7,11 @@ const Menu = () => {
     { name: "Cheese Burger", price: "250.99" },
     { name: "Pasta Alfredo", price: "200.49" },
     { name: "Grilled Chicken", price: "499.99" },
-    { name: "Chocolate Brownie", price: "150.99" }
+    { name: "Chocolate Brownie", price: "150.99" },
   ];
 
   return (
-    <Container style={{ textAlign: "center", padding: "20px", marginTop:"60px"}}>
+    <Container className="menu-container">
       <Typography variant="h4" fontWeight="bold" gutterBottom>
         Our Menu
       </Typography>
@@ -22,7 +22,7 @@ const Menu = () => {
               <CardContent>
                 <Typography variant="h6">{item.name}</Typography>
                 <Typography variant="body2" color="textSecondary">
-                  {item.price}
+                  ₹{item.price}
                 </Typography>
               </CardContent>
             </Card>

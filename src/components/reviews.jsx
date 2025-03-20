@@ -10,17 +10,17 @@ const reviews = [
 
 const Review = () => {
   return (
-    <Container sx={{ textAlign: "center", padding: "50px", marginTop: "64px" }}>
-      <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: "30px" }}>
+    <Container className="review-container">
+      <Typography variant="h4" className="review-title">
         Customer Reviews
       </Typography>
 
       {reviews.map((rev, index) => (
-        <Card key={index} sx={{ maxWidth:700, margin:" 20px auto", padding: "20px", boxShadow: 3 }}>
+        <Card key={index} className="review-card">
           <CardContent>
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>{rev.name}</Typography>
+            <Typography variant="h6" className="review-name">{rev.name}</Typography>
             <Rating value={rev.rating} precision={0.1} readOnly />
-            <Typography variant="body1" sx={{ fontStyle: "italic", marginTop: "10px" }}>
+            <Typography variant="body1" className="review-comment">
               "{rev.comment}"
             </Typography>
           </CardContent>
